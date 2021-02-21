@@ -12,7 +12,7 @@ void setup() {
 void loop() {
   unsigned long currentTime = millis();
 
-  if (ledEndTime != 0 && ledEndTime <= currentTime) {
+  if (ledEndTime != 0 && currentTime >= ledEndTime) {
     turnOffLed();
     ledEndTime = 0;
   }
